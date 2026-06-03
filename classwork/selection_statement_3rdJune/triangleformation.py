@@ -12,3 +12,5 @@ if(angle3<=0):
 #check whether these three angle form a triangle or not
 if((angle1 + angle2 + angle3)==180):
     print("triangle is formed")
+else:
+    print("triangle is not formed")
