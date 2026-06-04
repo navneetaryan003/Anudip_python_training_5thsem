@@ -5,6 +5,9 @@ number=int(input("enter the number"))
 
 #validate the number
 if(number<0):
+
+    #exit from the execution if number is less than zero
+    
     exit("cannot be checked beacause number is negative")
 
 
