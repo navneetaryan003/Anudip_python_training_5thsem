@@ -1,3 +1,5 @@
+#program to remove duplicate entries of given number
+
 numbers=[] #take a empty list
 
 for i in range(5):
