@@ -2,7 +2,7 @@
 
 numbers=[] #take a empty list
 
-for i in range(5):
+for i in range(20):
 
     num=int(input("enter the number")) #taking input from user 
 
