@@ -1,3 +1,4 @@
+#guess a secret number
 #taking input of secret number
 secret_number=int(input("enter the secret number"))
 
