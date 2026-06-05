@@ -1,3 +1,6 @@
+#checking whether the number is palindrome or not 
+#palindrome number is that number whose reverse is same as original number
+
 num = int(input("Enter a number: ")) #taking input of a number
 
 temp = num     #copying a number 
