@@ -27,7 +27,7 @@ for passenger in passengers:
     
    
 
-    if passenger[1].capitalize()=="Waiting":
+    if passenger[1]=="Waiting":
 
         #task 1 :Display all waiting-list passengers.
 
@@ -50,9 +50,9 @@ print("number of Waiting passenger :",count_waiting)
 
 passenger_find=input("enter the passenger name :")
 
-for passenger in passengers:
-    if passenger_find.capitalize()==passenger[0].capitalize():
-        if passenger[1].capitalize()=="Confirmed":
+for name , status in passengers:
+    if passenger_find.capitalize()==name:
+        if status=="Confirmed":
             print(passenger_find," has a confirmed ticket")
             break
         
