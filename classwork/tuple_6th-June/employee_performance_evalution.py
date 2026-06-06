@@ -65,16 +65,16 @@ print("-------------------------------------------")
 
 for record in employees:
     if record[2]>=90:
-        print(record[1],": Excellent")
+        print(record[1],"-> Excellent")
     
     elif record[2]>=75:
-        print(record[1],": Good")
+        print(record[1],"-> Good")
 
     elif record[2]>=60:
-        print(record[1],": Average")
+        print(record[1],"-> Average")
     
     else:
-        print(record[1],": Needs Improvement")
+        print(record[1],"-> Needs Improvement")
 
 
 
