@@ -64,4 +64,8 @@ else:
         print(passenger_find,"has not found in list")
 
 
+print("confirmed passengers list :",confirmed_list)
+
+print("waiting passengers list :",waiting_list)
+
 
