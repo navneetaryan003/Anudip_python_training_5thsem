@@ -35,10 +35,13 @@ print("Pass percentage :",percentage)
 
 
 #task 4 : Stop checking if 3 failures are found.
-for product in products:
-    if count_fail==3:
-        print("3 failures found")
-        break
-else:
-    print("there is no failures equal to 3")
-    
+count_failed = 0
+
+for product_id, status in products:
+
+    if status == "Fail":
+        count_failed += 1
+
+        if count_failed == 3:
+            print("3 failures found")
+            break
