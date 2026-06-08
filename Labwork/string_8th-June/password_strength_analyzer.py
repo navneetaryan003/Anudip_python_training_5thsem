@@ -19,7 +19,8 @@
 # 5. Display all digits separately.
 # 6. Display all special characters separately.
 
-password = "Python@2026!"
+password = "Python@2026!"  # Example password   
+print(f"Password: {password}")
 
 # Check password strength
 if len(password) < 8:     # Minimum length check
@@ -35,34 +36,43 @@ else:
     special_chars = []     # List to store special characters
 
     for char in password:
-        if char.isupper():
+        if char.isupper():     # Check for uppercase letters
             uppercase_count += 1
-        elif char.islower():
-            lowercase_count += 1
-        elif char.isdigit():
-            digit_count += 1
-            digits.append(char)
-        else:
-            special_char_count += 1
-            special_chars.append(char)
 
-    if uppercase_count >= 1 and lowercase_count >= 1 and digit_count >= 1 and special_char_count >= 1:
-        print("Strong Password")
-    else:
-        print("Medium Password")
+        elif char.islower():     # Check for lowercase letters
+            lowercase_count += 1
+
+        elif char.isdigit():     # Check for digits
+            digit_count += 1
+            digits.append(char)    # Store the digit separately
+        else:
+            special_char_count += 1       # Check for special characters
+            special_chars.append(char)   # Store the special character separately
+
+    
 
     print(f"Uppercase Letters: {uppercase_count}")
     print(f"Lowercase Letters: {lowercase_count}")
-    print(f"Digits: {digit_count} - {', '.join(digits)}")
-    print(f"Special Characters: {special_char_count} - {', '.join(special_chars)}")
+    print(f"Digits: {digit_count}")
+    print(f"Special Characters: {special_char_count} ")
+    print("Digits:  ",digits)
+    print("Special Characters:  ", special_chars)
+
+    
+    # Determine password strength based on the counts
+    if uppercase_count >= 1 and lowercase_count >= 1 and digit_count >= 1 and special_char_count >= 1:
+        print("Password Strength : Strong ")
+    else:
+        print("Password Strength : Weak")
 
 
 '''
 Output:
-Strong Password
+Password: Python@2026!
 Uppercase Letters: 1
 Lowercase Letters: 5
 Digits: 4 - 2, 0, 2, 6      
 Special Characters: 1 - @
+Password Strength : Strong
 
 '''
