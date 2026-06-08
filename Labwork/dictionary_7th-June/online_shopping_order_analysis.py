@@ -39,7 +39,7 @@ sales = {
 print("Products sold more than 20 times:")
 for product, quantity in sales.items():
     if quantity > 20:
-        print(f"{product}: {quantity}")
+        print(product)
 
 #------------------------------------------------------
 #task 2: find the best-selling product
@@ -51,7 +51,7 @@ for product, quantity in sales_items:
     if quantity > best_selling_product[1]:
         best_selling_product = (product, quantity)
 
-print(f"\nBest-selling product: {best_selling_product[0]} with {best_selling_product[1]} sales")
+print(f"\nBest-selling product: {best_selling_product[0]}  ({best_selling_product[1]}) ")
 
 #------------------------------------------------------
 #task 3: find the least-selling product
@@ -60,7 +60,7 @@ for product, quantity in sales_items:
     if quantity < least_selling_product[1]:
         least_selling_product = (product, quantity)
 
-print(f"\nLeast-selling product: {least_selling_product[0]} with {least_selling_product[1]} sales")
+print(f"\nLeast-selling product: {least_selling_product[0]}  ({least_selling_product[1]})")
 
 #------------------------------------------------------
 #task 4: calculate total products sold
@@ -83,7 +83,7 @@ print(f"\nProducts requiring promotion: {products_requiring_promotion}")
 #task 6: count products having sales between 10 and 30
 count_products_between_10_and_30 = 0
 for quantity in sales.values():
-    if 10 <= quantity <= 30:
+    if 10 < quantity <= 30:
         count_products_between_10_and_30 += 1
 
 print(f"\nNumber of products with sales between 10 and 30: {count_products_between_10_and_30}")
