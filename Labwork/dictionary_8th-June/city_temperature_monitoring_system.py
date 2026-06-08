@@ -21,6 +21,7 @@
 # 6. Count cities with temperature between 35°C and 40°C.
 
 #------------------------------------------------
+
 temperature = {
     "Delhi": 41,
     "Mumbai": 33,
