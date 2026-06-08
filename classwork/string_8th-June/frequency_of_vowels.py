@@ -1,4 +1,4 @@
-#write a program to count the frequency of vowels in a given sentence.
+#write a program to input a sentence from the user and count the frequency of vowels in a given sentence.
 
 sentence = input("Enter a sentence: ")
 
