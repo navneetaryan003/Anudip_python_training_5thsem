@@ -20,6 +20,7 @@
 # 6. Count products having sales between 10 and 30.
 
 #--------------------------------------------------------
+
 sales = {
 "Laptop": 15,
 "Mouse": 45,
