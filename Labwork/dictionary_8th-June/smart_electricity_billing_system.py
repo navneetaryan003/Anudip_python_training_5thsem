@@ -23,6 +23,8 @@
 # o High Consumption (> 400)
 # 6. Count houses eligible for an energy-saving campaign (consumption > 300).
 
+
+#---------------------------------------------------------------
 units = {
     "House101": 320,
     "House102": 180,
