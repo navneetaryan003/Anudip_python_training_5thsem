@@ -1,9 +1,10 @@
-#write a program to input a sentence from the user and count the frequency of vowels in a given sentence.
+#write a program to input a sentence from the user and count the frequency of vowels in a given sentence ignoring the case sensitivity.
 
 sentence = input("Enter a sentence: ")
+sentence = sentence.lower()  # Convert to lowercase for case-insensitive comparison
 
 #vowels
-vowels = "aeiouAEIOU"
+vowels = "aeiou"
 
 #counting the frequency of vowels
 frequency = {}     #dictionary to store the frequency of each vowel
