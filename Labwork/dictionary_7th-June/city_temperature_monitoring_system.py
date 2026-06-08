@@ -43,22 +43,33 @@ for city, temp in temperature.items():
 
 #-----------------------------------------------
 #task 2 : Find the hottest city.
-temperature_list = list(temperature.items())
-hottest_city = temperature_list[0]
+#task 3 : Find the coolest city.
+#-----------------------------------------------
+
+temperature_list = list(temperature.items())  # Convert dictionary to list of tuples (city, temperature)
+
+hottest_city = temperature_list[0]    # Initialize hottest city with the first city in the list
+
+coolest_city = temperature_list[0]     # Initialize coolest city with the first city in the list
+
 for city, temp in temperature_list:
     if temp > hottest_city[1]:
         hottest_city = (city, temp)
 
-print(f"Hottest city: {hottest_city[0]}  ({hottest_city[1]}°C)")
-
-#-----------------------------------------------
-#task 3 : Find the coolest city.
-coolest_city = temperature_list[0]
-for city, temp in temperature_list:
     if temp < coolest_city[1]:
         coolest_city = (city, temp) 
 
+print(f"Hottest city: {hottest_city[0]}  ({hottest_city[1]}°C)")
+
 print(f"Coolest city: {coolest_city[0]}  ({coolest_city[1]}°C)")
+
+
+
+
+
+   
+
+
 
 #-----------------------------------------------
 #task 4 : Calculate average temperature.
