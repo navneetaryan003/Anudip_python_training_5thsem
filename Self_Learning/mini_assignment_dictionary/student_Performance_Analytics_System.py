@@ -31,8 +31,38 @@ students = {}
 
 while True:
     student_id = input("Enter student ID : ")
+    
+    #validate student ID
+    #check if student ID already exists
+    if student_id in students:
+        print(f"Student with ID {student_id} is already present in records")
+        continue
+
+    #check if student ID is alphanumeric
+    elif not student_id.isalnum():
+        print("Invalid student ID. Please enter a valid ID.")
+        continue
+
+
     name =input("Enter student name : ")
+
+    #validate student name
+    #check if student name is alphabetic
+    if not name.isalpha():
+        print("Invalid student name. Please enter a valid name.")
+        continue
+
     marks = int(input("Enter student marks : "))
+
+    #validate student marks
+    #check if student marks is numeric
+    if marks.digit():
+        print("Invalid student marks. Please enter a valid marks.")
+        continue
+    #check if student marks is between 0 and 100
+    elif marks < 0 or marks > 100 :
+        print("Invalid student marks. Please enter a valid marks.")
+        continue
     
     #add student record to dictionary
     students[student_id] = {
