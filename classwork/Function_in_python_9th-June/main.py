@@ -33,7 +33,7 @@ while(True):
     
     #to exit
     if choice==4:
-        break
+        exit()
 
     
 
@@ -43,7 +43,7 @@ while(True):
         #validate the side
         if side<=0:
             print("side cannot be negative or zero")
-            break
+            continue
 
         #to choose operation
         operation=choose_operation()
@@ -64,7 +64,7 @@ while(True):
         #validate the length
         if length<=0:
             print("length cannot be negative or zero")
-            break
+            continue
 
 
         breadth=float(input("enter the breadth of rectangle (in cm):"))
@@ -72,6 +72,7 @@ while(True):
         #validate the breadth
         if breadth<=0:
             print("breadth cannot be negative or zero")
+            continue
         
         #to choose operation
         operation=choose_operation()
@@ -91,7 +92,9 @@ while(True):
 
         #validate the radius
         if radius<=0:
-            exit("radius cannot be negative or zero")
+            print("radius cannot be negative or zero")
+            continue
+
         
         #to choose operation
         operation=choose_operation()
