@@ -28,8 +28,22 @@
 #empty dictionary to store student records
 students = {}
 
+n=int(input("Enter number of students : "))
 
-while True:
+#validate number of students
+if n <= 0:
+    print("Invalid number of students. Please enter a valid number.")
+    exit()
+
+elif n < 30:
+    print("Insufficient number of students. Please enter at least 30 students.")
+    exit()
+
+else:
+
+  for i in range(n):
+
+    #input of student records
     student_id = input("Enter student ID : ")
     
     #validate student ID
@@ -48,7 +62,7 @@ while True:
 
     #validate student name
     #check if student name is alphabetic
-    if not name.isalpha():
+    if not name.replace(" ","").isalpha():
         print("Invalid student name. Please enter a valid name.")
         continue
 
@@ -67,15 +81,13 @@ while True:
         "marks": marks
     }
     
-    #ask user if they want to add another student
-    choice = input("Do you want to add another student? (yes/no) : ")
-    if choice.lower() != "yes":
-        break
-
+    
 #1.display student records
 print("Student Records : ")
 for student_id, student_info in students.items():
     print(f"ID: {student_id}, Name: {student_info['name']}, Marks: {student_info['marks']}")
+
+
 
 #2.search student using student ID
 student_id_search=input("Enter student ID to search : ")
@@ -88,12 +100,29 @@ else:
 
 #3.add student 
 new_student_id=input("enter the new student id :")
+
+#check if student ID already exists
 if new_student_id in students:
     print(f"Student with student id {new_student_id} is already present in records")
 
 else:
     name=input("enter the name :")
+
+    #validate student name
+    #check if student name is alphabetic
+    if not name.replace(" ","").isalpha():
+        print("Invalid student name. Please enter a valid name.")
+        exit()
+
+
     marks=int(input("enter the marks :"))
+
+    #validate student marks
+    #check if student marks is between 0 and 100
+    if marks < 0 or marks > 100 :
+        print("Invalid student marks. Please enter a valid marks.")
+        exit()
+    
     students[new_student_id] = {
         "name": name,
         "marks": marks
@@ -105,6 +134,13 @@ print("New student record added successfully")
 student_id_update=input("Enter student ID to update marks : ")
 if student_id_update in students:
     new_marks = int(input("Enter new marks : "))
+
+    #validate student marks
+    #check if student marks is between 0 and 100
+    if new_marks < 0 or new_marks > 100 :
+        print("Invalid student marks. Please enter a valid marks.")
+        exit()
+    
     students[student_id_update]["marks"] = new_marks
     print(f"Marks for student with ID {student_id_update} updated successfully.")
 else:
@@ -121,17 +157,25 @@ else:
 
 
 #6.find topper and lowest scorer
-topper = students[0]
-lowest_scorer = students[0]
+topper_id = (list(students.keys()))[0]
+lowest_scorer_id = (list(students.keys()))[0]
 
 for student_id, student_info in students.items():
-    if student_info["marks"] > topper["marks"]:
-        topper = student_info
-    if student_info["marks"] < lowest_scorer["marks"]:
-        lowest_scorer = student_info
+    if student_info["marks"] > students[topper_id]["marks"]:
+        topper_id = student_id
+    if student_info["marks"] < students[lowest_scorer_id]["marks"]:
+        lowest_scorer_id = student_id
 
-print(f"topper id : {topper['id']}, name : {topper['name']}, marks : {topper['marks']}")
-print(f"lowest scorer id : {lowest_scorer['id']}, name : {lowest_scorer['name']}, marks : {lowest_scorer['marks']}")
+print("Topper : ")
+print("ID : ",topper_id)
+print("Name : ",students[topper_id]["name"])
+print("Marks : ",students[topper_id]["marks"])
+
+print("------------------------------------------------------------")
+print("Lowest scorer : ")
+print("ID : ",lowest_scorer_id)
+print("Name : ",students[lowest_scorer_id]["name"])
+print("Marks : ",students[lowest_scorer_id]["marks"])
 
 
 #7.calculate class average
