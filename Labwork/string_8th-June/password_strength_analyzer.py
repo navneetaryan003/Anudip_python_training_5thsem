@@ -19,8 +19,11 @@
 # 5. Display all digits separately.
 # 6. Display all special characters separately.
 
-password = "Python@2026!"  # Example password   
+password = input("enter the password :")  # Example password   
 print(f"Password: {password}")
+
+if password.isspace():
+    exit("password cannot be empty")
 
 # Check password strength
 if len(password) < 8:     # Minimum length check
@@ -32,7 +35,11 @@ else:
     lowercase_count = 0    # Count lowercase letters
     digit_count = 0        # Count digits
     special_char_count = 0   # Count special characters
-    digits = []             # List to store digits
+
+    if password.isdigit():
+         digits = []      # List to store digits
+
+    
     special_chars = []     # List to store special characters
 
     for char in password:
@@ -60,8 +67,23 @@ else:
 
     
     # Determine password strength based on the counts
-    if uppercase_count >= 1 and lowercase_count >= 1 and digit_count >= 1 and special_char_count >= 1:
-        print("Password Strength : Strong ")
+    conditions=0
+    if uppercase_count:
+        conditions+=1
+    
+    if lowercase_count:
+        conditions+=1
+    
+    if digit_count:
+        conditions+=1
+
+    if special_char_count:
+        conditions+=1
+
+    if conditions==4:
+        print("Password Strength : Strong")
+    elif conditions>=2:
+        print("Password Strength : Medium")
     else:
         print("Password Strength : Weak")
 
