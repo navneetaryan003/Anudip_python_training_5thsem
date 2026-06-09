@@ -6,11 +6,15 @@ from area_and_perimeter import *
 #creating a function for choosing operation
 def choose_operation():
     
-    operation=int(input("enter the operation you want to perform (1.area 2.perimeter):"))
+    #to choose operation
+    print("1.area")
+    print("2.perimeter")
+    operation=int(input("enter the operation you want to perform :"))
 
     #validate the operation
     if operation<1 or operation>2:
         exit("invalid operation")
+        
     
     return operation
 
@@ -24,7 +28,7 @@ while(True):
 
     #validate the choice
     if choice<1 or choice>4:
-        exit("invalid choice")
+        print("invalid choice")
     
     #to exit
     if choice==4:
@@ -33,11 +37,12 @@ while(True):
     
 
     if(choice==1):
-        side=float(input("enter the side of square:"))
+        side=float(input("enter the side of square (in cm):"))
 
         #validate the side
         if side<=0:
-            exit("side cannot be negative or zero")
+            print("side cannot be negative or zero")
+            break
 
         #to choose operation
         operation=choose_operation()
@@ -51,18 +56,19 @@ while(True):
             print("perimeter of square:",square_perimeter(side))
 
     elif(choice==2):
-        length=float(input("enter the length of rectangle:"))
+        length=float(input("enter the length of rectangle (in cm):"))
 
         #validate the length
         if length<=0:
-            exit("length cannot be negative or zero")
+            print("length cannot be negative or zero")
+            break
 
 
-        breadth=float(input("enter the breadth of rectangle:"))
+        breadth=float(input("enter the breadth of rectangle (in cm):"))
 
         #validate the breadth
         if breadth<=0:
-            exit("breadth cannot be negative or zero")
+            print("breadth cannot be negative or zero")
         
         #to choose operation
         operation=choose_operation()
