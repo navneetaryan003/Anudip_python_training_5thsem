@@ -36,8 +36,8 @@ else:
     digit_count = 0        # Count digits
     special_char_count = 0   # Count special characters
 
-    if password.isdigit():
-         digits = []      # List to store digits
+    
+    digits = []      # List to store digits
 
     
     special_chars = []     # List to store special characters
