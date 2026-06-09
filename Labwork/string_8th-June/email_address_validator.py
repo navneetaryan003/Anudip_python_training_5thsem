@@ -50,8 +50,22 @@ print("number of special characters",count_special)
 #6. Check whether:
 # o Exactly one '@' exists.
 # o At least one '.' exists after '@'.
-is_valid=True
-if not email.count("@")==1:
-    is_valid=False
+is_valid = True
 
+# Exactly one @
+if email.count("@") != 1:
+    is_valid = False
+
+# At least one . after @
+else:
+    at_pos = email.find("@")
+
+    if "." not in email[at_pos + 1:]:
+        is_valid = False
+
+# 7. Display Valid Email or Invalid Email.
+if is_valid:
+    print("Email status : Valid")
+else:
+    print("Email Status : Invalid")
 
