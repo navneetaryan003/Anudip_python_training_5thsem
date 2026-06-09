@@ -146,6 +146,15 @@ for student_id, student_info in students.items():
         print(f"ID: {student_id}, Name: {student_info['name']}, Marks: {student_info['marks']}")
 
 
+#11.display top 5 performers
+sorted_students = sorted(students.items(), key=lambda student_id: student_id[1]["marks"], reverse=True)
+top_5 = sorted_students[:5]
+
+for student_id, student_info in top_5:
+    print(f"ID: {student_id}, Name: {student_info['name']}, Marks: {student_info['marks']}")
+
+
+
 #12.create a seperate dictionary for scholarship students
 scholarship_students = {}
 for student_id, student_info in students.items():
