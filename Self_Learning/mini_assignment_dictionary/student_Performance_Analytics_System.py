@@ -55,12 +55,9 @@ while True:
     marks = int(input("Enter student marks : "))
 
     #validate student marks
-    #check if student marks is numeric
-    if marks.digit():
-        print("Invalid student marks. Please enter a valid marks.")
-        continue
+    
     #check if student marks is between 0 and 100
-    elif marks < 0 or marks > 100 :
+    if marks < 0 or marks > 100 :
         print("Invalid student marks. Please enter a valid marks.")
         continue
     
