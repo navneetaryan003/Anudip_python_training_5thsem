@@ -271,6 +271,8 @@ promotion_products={}
 
 for product_id , details in products.items():
     if details["sold"]<10:
+
+        #add to promotion products
         promotion_products[product_id]={
             "name":details["name"],
             "price":details["price"]
