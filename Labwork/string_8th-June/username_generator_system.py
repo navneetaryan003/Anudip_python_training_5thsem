@@ -14,7 +14,10 @@
 
 # Username Generator System
 
-name = input("Enter Name: ")
+name = input("Enter Name: ").strip()
+
+if not name:
+    exit("name cannot be empty")
 
 # Remove spaces
 username = name.replace(" ", "")
