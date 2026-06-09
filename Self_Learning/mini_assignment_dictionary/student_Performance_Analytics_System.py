@@ -114,7 +114,7 @@ else:
 #5.delete student
 student_id_delete=input("Enter student ID to delete : ")
 if student_id_delete in students:
-    students.remove(student_id_delete)
+    del students[student_id_delete]
     print(f"Student with ID {student_id_delete} deleted successfully.")
 else:
     print(f"Student with ID {student_id_delete} not found.")
