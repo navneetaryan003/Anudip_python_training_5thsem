@@ -9,6 +9,7 @@ def choose_operation():
     #to choose operation
     print("1.area")
     print("2.perimeter")
+    
     operation=int(input("enter the operation you want to perform :"))
 
     #validate the operation
@@ -55,6 +56,8 @@ while(True):
         elif operation==2:
             print("perimeter of square:",square_perimeter(side))
 
+        
+
     elif(choice==2):
         length=float(input("enter the length of rectangle (in cm):"))
 
@@ -81,6 +84,8 @@ while(True):
         elif operation==2:
             print("perimeter of rectangle:",rectangle_perimeter(length,breadth))
 
+       
+
     elif(choice==3):
         radius=float(input("enter the radius of circle:"))
 
@@ -98,6 +103,8 @@ while(True):
         #to calculate perimeter of circle    
         elif operation==2:
             print("perimeter of circle:",circle_circumference(radius))
+
+        
 
     
 
