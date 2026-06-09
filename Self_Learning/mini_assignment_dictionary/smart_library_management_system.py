@@ -31,12 +31,8 @@ library = {}
 n=int(input("enter number of books"))
 
 #validating number of books
-if n<0:
+if n<=0:
     print("invalid number of books")
-    exit()
-
-elif n==0:
-    print("no books available")
     exit()
 
 elif n<30:
