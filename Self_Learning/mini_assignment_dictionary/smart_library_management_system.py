@@ -24,11 +24,10 @@
 # 11. Generate a restocking report.
 # 12. Create a separate dictionary of books requiring immediate purchase.
 
-#empty dictionary to store book records
-library = {}
 
 #input of number of books
 n=int(input("enter number of books"))
+
 
 #validating number of books
 if n<=0:
@@ -40,6 +39,9 @@ elif n<30:
     exit()
 
 else:
+  
+  #empty dictionary to store book records
+  library = {}
   
   #input of book records
   for i in range(1,n+1):
