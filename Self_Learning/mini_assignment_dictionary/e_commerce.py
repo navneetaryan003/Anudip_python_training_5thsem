@@ -26,22 +26,16 @@
 # Challenge
 # Generate a complete business report.
 
-#get number of products
-n=int(input("enter number of products"))
+#-----------------------------------------------------------------------------
 
-#validate number of products
-if n<=0:
-    exit("Invalid number of products. Please enter a valid number.")
+#minimum number of products
+n=30
 
-elif n<30:
-    exit("Insufficient number of products. Please enter at least 30 products.")
-
-else:
    
-  #empty dictionary to store product records
-  products = {}
+#empty dictionary to store product records
+products = {}
 
-  for i in range(n): 
+while True:
     product_id = input("Enter product ID : ")
 
     #validate product id
@@ -88,6 +82,17 @@ else:
         "stock": stock,
         "sold": sold
     }
+
+     #check if number of students is equal to 30
+    if len(products) < n:
+        continue
+
+    else:
+        
+        #ask user to continue or exit
+        choice = input("Do you want to continue? (yes/no) : ")
+        if choice.lower() != "yes":
+            break
 
    
 
