@@ -110,7 +110,7 @@ def reviews_with_keyword(reviews, keyword):
 excellent, good, average, poor = count_sentiments(reviews)
 
 #displaying sentiments
-print("Excellent:", excellent)
+print("Excellent Reviews:", excellent)
 print("Good:", good)
 print("Average:", average)
 print("Poor:", poor)
