@@ -23,29 +23,16 @@
 # 10. Find the most available book.
 # 11. Generate a restocking report.
 # 12. Create a separate dictionary of books requiring immediate purchase.
+#-----------------------------------------------------------------------------
 
+n=30     #minimum number of books
 
-#input of number of books
-n=int(input("enter number of books"))
-
-
-#validating number of books
-if n<=0:
-    print("invalid number of books")
-    exit()
-
-elif n<30:
-    print("minimum 30 books required")
-    exit()
-
-else:
   
-  #empty dictionary to store book records
-  library = {}
+#empty dictionary to store book records
+library = {}
   
   #input of book records
-  for i in range(1,n+1):
-
+while True:
     #book_id
     book_id=input("enter book id")
 
@@ -91,7 +78,16 @@ else:
         "copies": book_copies
     }
 
-    
+     #check if number of students is equal to 30
+    if len(library) < n:
+        continue
+
+    else:
+        
+        #ask user to continue or exit
+        choice = input("Do you want to continue? (yes/no) : ")
+        if choice.lower() != "yes":
+            break
 
 
 # 1. Add a book.
