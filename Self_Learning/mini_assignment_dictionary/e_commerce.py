@@ -26,11 +26,22 @@
 # Challenge
 # Generate a complete business report.
 
+#get number of products
+n=int(input("enter number of products"))
 
-#empty dictionary to store product records
-products = {}
+#validate number of products
+if n<=0:
+    exit("Invalid number of products. Please enter a valid number.")
 
-while True:
+elif n<30:
+    exit("Insufficient number of products. Please enter at least 30 products.")
+
+else:
+   
+  #empty dictionary to store product records
+  products = {}
+
+  for i in range(n): 
     product_id = input("Enter product ID : ")
 
     #validate product id
@@ -78,10 +89,7 @@ while True:
         "sold": sold
     }
 
-    choice = input("Do you want to add more products? (yes/no) : ")
-    if choice.lower() != "yes":
-        break
-
+   
 
 #1. Display all products.
 print("All products:")
