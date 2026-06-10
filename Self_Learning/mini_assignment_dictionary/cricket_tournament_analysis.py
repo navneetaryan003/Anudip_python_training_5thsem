@@ -29,20 +29,13 @@
 
 
 #-----------------------------------------
-n=int(input("Enter number of players : "))
+n=30     #minimum number of players
 
-if n<=0:
-    exit("Number of players should be greater than 0")
 
-elif n<30:
-    exit("minimum 30 players required")
-
-else:
-    
     #creating a dictionary
-    player={}
+player={}
 
-    for i in range(n):
+while True:
         
         #input name of the player
         name=input("Enter name of player : ")
@@ -83,6 +76,17 @@ else:
             "matches" : matches,
             "wickets" : wickets
         }
+
+         #check if number of students is equal to 30
+        if len(player) < n:
+             continue
+
+        else:
+        
+          #ask user to continue or exit
+          choice = input("Do you want to continue? (yes/no) : ")
+          if choice.lower() != "yes":
+            break
 
 
 # 1. Display all player statistics.
