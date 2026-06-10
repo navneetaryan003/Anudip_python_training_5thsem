@@ -71,13 +71,13 @@ print("Booked Seats:", booked)
 print("Available Seats:", available)
 
 # Call the function for finding the first available seat
-first_seat = first_available(seats)
-print("First Available Seat:", first_seat)
+print("First Available Seat:", first_available(seats))
 
 # Call the function for calculating the occupancy percentage
-occupancy = occupancy_percentage(seats)
-print(f"Occupancy Percentage: {occupancy:.2f}%")
+print(f"Occupancy Percentage: {occupancy_percentage(seats):.2f}%")
 
 # Call the function for displaying available seats
 available_seats = display_available_seats(seats)
-print("Available Seats:", available_seats)
+print("Available Seats:")
+for seat in available_seats:
+    print(seat)
