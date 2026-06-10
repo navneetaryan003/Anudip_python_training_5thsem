@@ -26,23 +26,13 @@
 # 12. Create a separate dictionary for scholarship students (marks > 85).
 
 
-n=int(input("Enter number of students : "))
 
-#validate number of students
-if n <= 0:
-    print("Invalid number of students. Please enter a valid number.")
-    exit()
+n=30     #minimum number of students
 
-elif n < 30:
-    print("Insufficient number of students. Please enter at least 30 students.")
-    exit()
+#empty dictionary to store student records
+students = {}
 
-else:
-  
-  #empty dictionary to store student records
-  students = {}
-
-  for i in range(n):
+while True:
 
     #input of student records
     student_id = input("Enter student ID : ")
@@ -82,6 +72,17 @@ else:
         "marks": marks
     }
     
+    #check if number of students is equal to 30
+    if len(students) < n:
+        continue
+
+    else:
+        
+        #ask user to continue or exit
+        choice = input("Do you want to continue? (yes/no) : ")
+        if choice.lower() != "yes":
+            break
+            
     
 #1.display student records
 print("Student Records : ")
@@ -220,11 +221,11 @@ for student_id, student_info in students.items():
 
 #11.display top 5 performers
 sorted_students = sorted(students.items(), key=lambda student_id: student_id[1]["marks"], reverse=True)
-top_5 = sorted_students[:5]
-
-for student_id, student_info in top_5:
+top_5_students = sorted_students[:5]
+for student_id, student_info in top_5_students:
     print(f"ID: {student_id}, Name: {student_info['name']}, Marks: {student_info['marks']}")
 
+print("------------------------------------------------------------")
 
 
 #12.create a seperate dictionary for scholarship students
