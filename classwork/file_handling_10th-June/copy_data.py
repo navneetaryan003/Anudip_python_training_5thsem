@@ -1,5 +1,4 @@
 #copy a data from one file to another file
-
 file1=open("classwork/file_handling_10th-June/sentences.txt","r")
 if not file1:
     exit("file is not opened")
