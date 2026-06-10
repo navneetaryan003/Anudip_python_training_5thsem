@@ -25,8 +25,6 @@
 # 11. Display top 5 performers.
 # 12. Create a separate dictionary for scholarship students (marks > 85).
 
-#empty dictionary to store student records
-students = {}
 
 n=int(input("Enter number of students : "))
 
@@ -40,6 +38,9 @@ elif n < 30:
     exit()
 
 else:
+  
+  #empty dictionary to store student records
+  students = {}
 
   for i in range(n):
 
