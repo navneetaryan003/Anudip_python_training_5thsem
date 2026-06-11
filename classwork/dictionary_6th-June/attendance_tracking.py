@@ -6,7 +6,6 @@
 attendance={}      #taking empty dictionary
 
 for i in range(5):
-    
     roll_number=int(input("enter the roll number :"))
     status=input("enter attendance (Present/Absent) :")
 
