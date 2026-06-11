@@ -68,6 +68,12 @@ for seat, status in seats.items():
 
 #4. Cancel booking for a given seat number
 seat_to_cancel = int(input("Enter the seat number to cancel: "))
+
+#validating the seat number
+if seat_to_cancel < 1 or seat_to_cancel > 10:
+    print("Invalid seat number.")
+    exit()
+    
 if seat_to_cancel in seats:
     seats[seat_to_cancel] = "Available"
 
