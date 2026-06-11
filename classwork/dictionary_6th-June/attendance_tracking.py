@@ -17,6 +17,7 @@ print(attendance)
 print("Present students :")
 
 for roll_number,status in attendance.items():
+    
     if status.lower()=="present":
         print("present student: ",roll_number)
 
