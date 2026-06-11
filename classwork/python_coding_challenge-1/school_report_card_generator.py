@@ -51,7 +51,7 @@ for line in file:
         grade="D"
     else:
         grade="F"
-    print(data[0],data[1],grade)
+    
 
     #writing the data into report card file
     report.write(data[0]+"," + data[1]+"," + data[2]+"," + grade+"\n")
@@ -63,7 +63,7 @@ for line in file:
 file.seek(0)
 
 #initialize variables
-topper_id=""
+
 topper_name=""
 topper_marks=0
 
@@ -75,13 +75,11 @@ for line in file:
 
     if marks>topper_marks:
         topper_name=data[1]
-        topper_id=data[0]
+        \
         topper_marks=marks
 
-print("Topper Details :")
-print(" ID:",topper_id)
-print("Name:",topper_name)
-print(" Marks:",topper_marks)
+print("Topper : ")
+print(f"Name : {topper_name} ({topper_marks})")
 
 
 #3.count pass and fail students
