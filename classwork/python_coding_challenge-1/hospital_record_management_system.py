@@ -22,8 +22,13 @@
 
 file=open("classwork/python_coding_challenge-1/patients.txt","r")
 
+#check if file is opened
 if not file:
     exit("file is not opened")
+
+#validation of file either it is empty or not
+if not file.read():
+    exit("file is empty")
 
 
     
