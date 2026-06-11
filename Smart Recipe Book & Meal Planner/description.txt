@@ -1,7 +1,7 @@
                                      Smart Recipe Book & Meal Planner
 ----------------------------------------------------------------------------------------------------------------------------
-
-Project Overview :
+Project Overview 
+----------------------------------------------------------------------------------------------------------------------------
 
 The Smart Recipe Book & Meal Planner is a command-line based application developed using Core Python. The main purpose of this project is to help users manage recipes, plan meals, and generate shopping lists in a simple and organized way.
 The application allows users to register and log in, maintain a collection of recipes, search recipes based on available ingredients, adjust ingredient quantities according to serving sizes, create meal plans, and generate shopping lists for missing ingredients. All data will be stored in text files, ensuring that information is saved even after the program is closed.
@@ -9,7 +9,8 @@ The project is designed to demonstrate the practical implementation of Core Pyth
 
 
 ----------------------------------------------------------------------------------------------------------------------------
-Objectives :
+Objectives 
+----------------------------------------------------------------------------------------------------------------------------
 
 Store and manage recipes efficiently.
 Search recipes using available ingredients.
@@ -19,7 +20,8 @@ Perform CRUD operations using file handling.
 Demonstrate the use of Core Python concepts in a real-world application.
 
 ----------------------------------------------------------------------------------------------------------------------------
-Modules  : 
+Modules  
+----------------------------------------------------------------------------------------------------------------------------
 
 1. User Authentication Module
 User Registration
@@ -49,9 +51,10 @@ Display Missing Ingredients
 Total Number of Recipes
 Most Frequently Used Ingredients
 Meal Plan Summary
-----------------------------------------------------------------------------------------------------------------------------
-Core Python Concepts Used :
 
+----------------------------------------------------------------------------------------------------------------------------
+Core Python Concepts Used 
+----------------------------------------------------------------------------------------------------------------------------
 Selection Statements :
 if
 if-else
@@ -74,8 +77,8 @@ Exception Handling
 File Handling
 
 ----------------------------------------------------------------------------------------------------------------------------
-
-Files Used :
+Files Used 
+----------------------------------------------------------------------------------------------------------------------------
 
 users.txt
 Stores user login information.
