@@ -77,5 +77,5 @@ else:
 #used for release resources
 finally:
 
-    print("triangle operation completed")
+    print("The triangle area calculation process has been completed ...")
 
