@@ -63,21 +63,26 @@ print(f"Total Water Consumption: {total_consumption} litres")
 # o Medium (2000–3500 litres)
 # o High (>3500 litres)
 
+low_consume=[]
+medium_consume=[]
+high_consume=[]
+
 category = {}
 
 for house, usage in water_usage.items():
     if usage < 2000:
-        category[house] = "Low"
+        low_consume.append(house)
 
     elif 2000 <= usage <= 3500:
-        category[house] = "Medium"
+        medium_consume.append(house)
 
     else:
-        category[house] = "High"
+        high_consume.append(house)
 
-print("House Categories:")
-for house, category in category.items():
-    print(f"{house}: {category}")
+print("Low Consumption Houses:", low_consume)
+print("Medium Consumption Houses:", medium_consume)
+print("High Consumption Houses:", high_consume)
+
     
 
 #5. Count households eligible for conservation awareness programs (>2500 litres).
