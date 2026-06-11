@@ -70,9 +70,11 @@ except TriangleError as e:
     print(e)
 
 else:
+
     #to calculate area
     s=(a+b+c)/2
     print("area of circle is: ",(s*(s-a)*(s-b)*(s-c))**0.5)
+    
 
 #used for release resources
 finally:
